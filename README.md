@@ -51,16 +51,7 @@ proxy:
     ports:
       - 80:80
       - 8888:443
-    depends_on:
-      - mysql
-      - registry
-      - ui
-      - log
-    logging:
-      driver: "syslog"
-      options:  
-        syslog-address: "tcp://127.0.0.1:1514"
-        tag: "proxy"
+    
 
 #ubah versi semua imge menjadi vx.x.2
 sudo vim docker-compose.yml
