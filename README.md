@@ -43,15 +43,9 @@ cp 10.100.100.110.key /root/cert/
 6. konfigurasi docker-compose.yml untuk membuat harbor listen ke HTTPS
 sudo vim docker-compose.yml
 .................
-proxy:
-    image: library/nginx:1.11.5
-    restart: always
-    volumes:
-      - ./config/nginx:/etc/nginx
-    ports:
+
       - 80:80
       - 8888:443
-    
 
 #ubah versi semua imge menjadi vx.x.2
 sudo vim docker-compose.yml
